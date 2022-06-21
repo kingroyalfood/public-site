@@ -19,9 +19,9 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build && next export",
+    "build": "next build && next export && touch out/.nojekyll",
     "start": "next start",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -t -d out",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "devDependencies": {

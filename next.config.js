@@ -5,6 +5,9 @@ const path = require('path');
  */
 
 module.exports = {
+  assetPrefix: '/dojo-wishlist/',
+  basePath: '/dojo-wishlist',
+
   sassOptions: {
     includePaths: [path.join(__dirname, 'src', 'style')],
   },
