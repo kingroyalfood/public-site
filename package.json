@@ -21,6 +21,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "deploy": "gh-pages -d build",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
   },
   "devDependencies": {
@@ -29,6 +30,7 @@
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "gh-pages": "latest",
     "postcss-flexbugs-fixes": "latest",
     "postcss-preset-env": "latest",
     "sass": "latest",
