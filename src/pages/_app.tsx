@@ -36,9 +36,10 @@ export default function App(props: AppProps) {
   } = props;
 
 
+
   const getLayout = Component.getLayout ?? ((page) => (
     <DefaultLayout
-      pageTitle={Component.pageTitle ?? 'Dojo Wish List'}
+      pageTitle={Component.pageTitle ?? process.env.APP_TITLE ?? 'My Application'}
     >
       {page}
     </DefaultLayout>

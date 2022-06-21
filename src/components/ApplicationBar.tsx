@@ -36,7 +36,6 @@ export default function ApplicationBar({ maxContainerWidth }: {
           <Container maxWidth={maxContainerWidth}>
             <Toolbar disableGutters className={styles.toolbar}>
 
-              Dojo Wishlist
             </Toolbar>
           </Container>
         </AppBar>
