@@ -3,12 +3,15 @@ import clsx from 'clsx';
 import React, { ReactElement } from 'react';
 
 // import NextLink from "next/link";
+import Image from 'next/image'
 
 import AppBar from "@mui/material/AppBar";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Breakpoint } from '@mui/system';
+
+import AppIcon from 'media/images/app-icon.png';
 
 // import Link from './Link';
 
@@ -38,11 +41,12 @@ export default function ApplicationBar({ maxContainerWidth }: {
   return (
     <PersistentAppBar>
         <AppBar>
-          <Toolbar disableGutters>
-            <Container maxWidth={maxContainerWidth}>
+          <Container maxWidth={maxContainerWidth}>
+            <Toolbar disableGutters className={styles.toolbar}>
+              <Image src={AppIcon} height={48} width={48} />
               Dojo Wishlist
-            </Container>
-          </Toolbar>
+            </Toolbar>
+          </Container>
         </AppBar>
     </PersistentAppBar>
   );
