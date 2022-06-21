@@ -19,7 +19,7 @@
   },
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "deploy": "gh-pages -d build",
     "post-update": "echo \"codesandbox preview only, need an update\" && yarn upgrade --latest"
@@ -34,6 +34,7 @@
     "postcss-flexbugs-fixes": "latest",
     "postcss-preset-env": "latest",
     "sass": "latest",
+    "serve": "latest",
     "typescript": "latest"
   }
 }
