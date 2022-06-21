@@ -39,7 +39,7 @@ export default function App(props: AppProps) {
 
   const getLayout = Component.getLayout ?? ((page) => (
     <DefaultLayout
-      pageTitle={Component.pageTitle ?? process.env.APP_TITLE ?? 'My Application'}
+      pageTitle={Component.pageTitle ?? process.env.NEXT_PUBLIC_APP_TITLE ?? 'My Application'}
     >
       {page}
     </DefaultLayout>
