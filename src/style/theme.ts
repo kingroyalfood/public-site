@@ -24,7 +24,10 @@ const theme = responsiveFontSizes(
 
       h1: {
         fontSize: 60,
-        fontWeight: 500,
+      },
+
+      h2: {
+        fontSize: 48,
       }
     },
 
