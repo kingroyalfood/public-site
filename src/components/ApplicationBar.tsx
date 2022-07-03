@@ -3,8 +3,10 @@ import clsx from 'clsx';
 import React, { ReactElement } from 'react';
 
 import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Breakpoint } from '@mui/system';
 
@@ -35,13 +37,33 @@ export default function ApplicationBar({ maxContainerWidth }: {
         <AppBar>
           <Container maxWidth={maxContainerWidth}>
             <Toolbar disableGutters className={styles.toolbar}>
-              <img
-                alt="King Royal Food Logo"
-                src={staticMedia('/apple-touch-icon.png')}
-                width="180"
-                height="180"
-              />
-              {process.env.NEXT_PUBLIC_APP_TITLE}
+              <Box sx={{
+                alignItems: 'center',
+                display: 'grid',
+                gridTemplateColumns: {
+                  xs: '1fr 90px',
+                  sm: '1fr 120px',
+                  md: '1fr 180px',
+                },
+                p: 2,
+                width: '100%',
+              }}>
+                <Typography variant="h1">
+                  {process.env.NEXT_PUBLIC_APP_TITLE}
+                </Typography>
+
+                <Box
+                  alt="King Royal Food Logo"
+                  component="img"
+                  src={staticMedia('/apple-touch-icon.png')}
+                  width="180"
+                  height="180"
+                  sx={{
+                    width: '100%',
+                  }}
+                />
+              </Box>
+
             </Toolbar>
           </Container>
         </AppBar>

@@ -7,14 +7,14 @@ const theme = responsiveFontSizes(
       MuiCssBaseline: {
         styleOverrides: {
           body: {
-            backgroundColor: '#eeeeee',
+            backgroundColor: '#eeccb3',
           }
         }
       },
 
       MuiContainer: {
         defaultProps: {
-          maxWidth: 'lg',
+          maxWidth: 'md',
         }
       }
     },
