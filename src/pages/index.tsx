@@ -98,10 +98,15 @@ function IndexPage() {
       </ContentSection>
 
       <ContentSection id="order">
-        <ContentSectionHeading text="Order" />
-        <Typography>
-          Order Form
-        </Typography>
+        <ContentSectionHeading text="Order Form" />
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSd3-HTUu2u_YPcLVIBJGzCcTb4b0alFTZ2P-fjKJuoObPhjtA/viewform?embedded=true"
+          width="100%"
+          height="1500px"
+          frameBorder="0"
+        >
+          Loading…
+        </iframe>
       </ContentSection>
     </>
   );
