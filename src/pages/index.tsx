@@ -67,7 +67,7 @@ function IndexPage() {
               sx={{
                 display: 'flex',
                 fontWeight: 'bold',
-                fontSize: 18,
+                fontSize: 20,
                 justifyContent: 'space-between',
                 listStyleType: 'none',
                 maxWidth: 400,

@@ -6,7 +6,6 @@ import Container from "@mui/material/Container";
 import ApplicationBar from "components/ApplicationBar";
 
 
-import styles from './DefaultLayout.module.scss';
 import { staticMedia } from "util/shortcuts";
 
 
@@ -24,7 +23,7 @@ export default function Layout({ children, pageTitle }: {
 
       <ApplicationBar />
 
-      <Container className={styles.appContainer}>
+      <Container sx={{ pt: 3 }}>
         {children}
       </Container>
     </>
