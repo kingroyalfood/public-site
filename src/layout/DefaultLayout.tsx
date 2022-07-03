@@ -23,7 +23,7 @@ export default function Layout({ children, pageTitle }: {
 
       <ApplicationBar />
 
-      <Container sx={{ pt: 3 }}>
+      <Container sx={{ pt: 4 }}>
         {children}
       </Container>
     </>

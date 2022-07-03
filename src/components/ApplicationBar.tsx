@@ -63,7 +63,7 @@ export default function ApplicationBar({ maxContainerWidth }: {
                 color: '#000',
                 display: 'flex',
                 fontSize: 18,
-                gap: 4,
+                gap: 3,
                 listStyleType: 'none',
                 p: 0,
               }}>
@@ -79,7 +79,6 @@ export default function ApplicationBar({ maxContainerWidth }: {
             <Stack direction="row">
               <Tooltip title="WhatsApp">
                 <IconButton
-                  size="large"
                   href="https://wa.me/6281238020007"
                   target="_blank"
                   rel="noopener"
@@ -90,7 +89,6 @@ export default function ApplicationBar({ maxContainerWidth }: {
 
               <Tooltip title="Email">
                 <IconButton
-                  size="large"
                   href="mailto:info@kingroyalfood.com"
                 >
                   <MailIcon fontSize="large" />
@@ -99,7 +97,6 @@ export default function ApplicationBar({ maxContainerWidth }: {
 
               <Tooltip title="Instagram">
                 <IconButton
-                  size="large"
                   href="https://www.instagram.com/kingroyalfood369/"
                   rel="noopener"
                   target="_blank"
