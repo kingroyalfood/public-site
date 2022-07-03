@@ -8,7 +8,6 @@ type ContentSectionProps = {
   children: JSX.Element | JSX.Element[],
 };
 
-
 export const ContentSection: React.FC<ContentSectionProps> = ({
   children,
 }) => {
@@ -20,12 +19,9 @@ export const ContentSection: React.FC<ContentSectionProps> = ({
 };
 
 
-
-
 type ContentSectionHeadingProps = {
   text: string,
 };
-
 
 export const ContentSectionHeading: React.FC<ContentSectionHeadingProps> = ({
   text,
@@ -36,4 +32,3 @@ export const ContentSectionHeading: React.FC<ContentSectionHeadingProps> = ({
     </Typography>
   );
 };
-

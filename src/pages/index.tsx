@@ -12,6 +12,17 @@ import {
 } from "components/helpers";
 import { staticMedia } from "util/shortcuts";
 
+
+const MENU_ITEM_ARRANGEMENT = [
+  { name: 'Chicken Vegetables', price: 11 },
+  { name: 'Vegan', price: 12 },
+  { name: 'Choco Cheese Banana', price: 13 },
+  { name: 'Golden Prawn', price: 16 },
+  { name: 'Smoked Beef', price: 16 },
+  { name: 'Cheese Mozzarella', price: 16 },
+];
+
+
 function IndexPage() {
   return (
     <>
@@ -42,15 +53,50 @@ function IndexPage() {
       </ContentSection>
 
       <ContentSection>
-        <ContentSectionHeading text="Menu" />
+        <ContentSectionHeading text="Our Menu" />
+
+        <Typography variant="h3" mt={4}>
+          RESOLES
+        </Typography>
+        <Box component="ol" sx={{
+          p: 0,
+          width: '100%',
+        }}>
+          {MENU_ITEM_ARRANGEMENT.map((menuItem) => (
+            <Box
+              component="li"
+              key={menuItem.name}
+              sx={{
+                display: 'flex',
+                fontWeight: 'bold',
+                fontSize: 18,
+                justifyContent: 'space-between',
+                listStyleType: 'none',
+                maxWidth: 400,
+              }}
+            >
+              <Typography fontWeight="inherit" fontSize="inherit">
+                {menuItem.name}
+              </Typography>
+              <Typography fontWeight="inherit" fontSize="inherit">
+                {menuItem.price}k
+              </Typography>
+            </Box>
+          ))}
+        </Box>
+
         <Box
           alt="Plate of resoles"
           component="img"
           src={staticMedia('/product-2.jpg')}
           width="904"
           height="625"
-          sx={{ width: '100%' }}
+          sx={{ width: '100%', mt: 4 }}
         />
+        <Typography align="center">
+          Our food is frozen prior to delivery and can keep in the freezer for
+          up to one month at -18c or below.
+        </Typography>
       </ContentSection>
 
       <ContentSection>
