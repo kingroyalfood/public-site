@@ -9,7 +9,7 @@ import useScrollTrigger from '@mui/material/useScrollTrigger';
 import { Breakpoint } from '@mui/system';
 
 import styles from "./ApplicationBar.module.scss";
-
+import { staticMedia } from 'util/shortcuts';
 
 function PersistentAppBar({ children }: {
   children: React.ReactNode,
@@ -37,7 +37,7 @@ export default function ApplicationBar({ maxContainerWidth }: {
             <Toolbar disableGutters className={styles.toolbar}>
               <img
                 alt="King Royal Food Logo"
-                src={`${process.env.NEXT_PUBLIC_URL_PREFIX}/apple-touch-icon.png`}
+                src={staticMedia('/apple-touch-icon.png')}
                 width="180"
                 height="180"
               />

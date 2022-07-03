@@ -7,6 +7,7 @@ import ApplicationBar from "components/ApplicationBar";
 
 
 import styles from './DefaultLayout.module.scss';
+import { staticMedia } from "util/shortcuts";
 
 
 export default function Layout({ children, pageTitle }: {
@@ -17,7 +18,7 @@ export default function Layout({ children, pageTitle }: {
     <>
       <Head>
         <title>{pageTitle}</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={staticMedia('/favicon.ico')} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
 
