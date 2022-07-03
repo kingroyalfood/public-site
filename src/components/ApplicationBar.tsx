@@ -71,7 +71,7 @@ export default function ApplicationBar({ maxContainerWidth }: {
                   Menu
                 </Link>
                 <Link fontSize="inherit" href="#order" underline="hover">
-                  Order Form
+                  Order
                 </Link>
               </Box>
             </nav>

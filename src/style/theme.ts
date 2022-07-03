@@ -22,7 +22,7 @@ const theme = responsiveFontSizes(
     typography: {
       fontFamily: '"Times New Roman", sans-serif',
 
-      h1: { fontSize: 60 },
+      h1: { fontSize: 50 },
       h2: { fontSize: 48 },
       h3: { fontSize: 32 },
     },
