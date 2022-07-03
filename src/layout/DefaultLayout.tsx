@@ -19,6 +19,11 @@ export default function Layout({ children, pageTitle }: {
         <title>{pageTitle}</title>
         <link rel="icon" href={staticMedia('/favicon.ico')} />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+        <meta property="og:title" content="King Royal Food" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://kingroyalfood.github.io/public-site/" />
+        <meta property="og:image" content={staticMedia('/android-chrome-192x192.png')} />
       </Head>
 
       <ApplicationBar />
