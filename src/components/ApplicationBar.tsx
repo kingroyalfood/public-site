@@ -5,10 +5,13 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Link from "@mui/material/Link";
+import Stack from "@mui/material/Stack";
 import Tooltip from "@mui/material/Tooltip"
 import Typography from "@mui/material/Typography";
 import { Breakpoint } from '@mui/system';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import MailIcon from '@mui/icons-material/Mail';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 
 import { staticMedia } from 'util/shortcuts';
 
@@ -72,7 +75,28 @@ export default function ApplicationBar({ maxContainerWidth }: {
                 </Link>
               </Box>
             </nav>
-            <Box>
+
+            <Stack direction="row">
+              <Tooltip title="WhatsApp">
+                <IconButton
+                  size="large"
+                  href="https://wa.me/6281238020007"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <WhatsAppIcon fontSize="large" />
+                </IconButton>
+              </Tooltip>
+
+              <Tooltip title="Email">
+                <IconButton
+                  size="large"
+                  href="mailto:info@kingroyalfood.com"
+                >
+                  <MailIcon fontSize="large" />
+                </IconButton>
+              </Tooltip>
+
               <Tooltip title="Instagram">
                 <IconButton
                   size="large"
@@ -83,7 +107,7 @@ export default function ApplicationBar({ maxContainerWidth }: {
                   <InstagramIcon fontSize="large" />
                 </IconButton>
               </Tooltip>
-            </Box>
+            </Stack>
           </Container>
         </Box>
     </AppBar>
