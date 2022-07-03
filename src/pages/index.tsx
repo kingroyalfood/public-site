@@ -1,10 +1,7 @@
 import React from 'react';
 
 import Box from "@mui/material/Box";
-import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-
-// import styles from './index.module.scss';
 
 import {
   ContentSection,
@@ -27,8 +24,13 @@ function IndexPage() {
   return (
     <>
       <ContentSection>
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
+        <Box
+          display={{ xs: 'flex', md: 'grid' }}
+          flexDirection="column"
+          gridTemplateColumns="1fr 1fr"
+          gap={3}
+        >
+          <Box flex={1}>
             <ContentSectionHeading text="Welcome!" />
 
             <Typography fontSize={20}>
@@ -37,22 +39,18 @@ function IndexPage() {
               delights, providing clients with delicious shacks without
               any hassle.
             </Typography>
-          </Grid>
+          </Box>
 
-          <Grid item xs={12} md={6}>
-            <Box
-              alt="Friends enjoying resoles together"
-              component="img"
-              src={staticMedia('/product-1.jpg')}
-              width="904"
-              height="625"
-              sx={{ width: '100%' }}
-            />
-          </Grid>
-        </Grid>
+          <Box
+            alt="Friends enjoying resoles together"
+            component="img"
+            src={staticMedia('/product-1.jpg')}
+            sx={{ width: '100%' }}
+          />
+        </Box>
       </ContentSection>
 
-      <ContentSection>
+      <ContentSection id="menu">
         <ContentSectionHeading text="Our Menu" />
 
         <Typography variant="h3" mt={4}>
@@ -99,7 +97,7 @@ function IndexPage() {
         </Typography>
       </ContentSection>
 
-      <ContentSection>
+      <ContentSection id="order">
         <ContentSectionHeading text="Order" />
         <Typography>
           Order Form

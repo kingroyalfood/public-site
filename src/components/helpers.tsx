@@ -6,13 +6,15 @@ import Typography from "@mui/material/Typography";
 
 type ContentSectionProps = {
   children: JSX.Element | JSX.Element[],
+  id?: string,
 };
 
 export const ContentSection: React.FC<ContentSectionProps> = ({
   children,
+  id,
 }) => {
   return (
-    <Box component="section" mb={3}>
+    <Box component="section" mb={3} id={id}>
       {children}
     </Box>
   );
