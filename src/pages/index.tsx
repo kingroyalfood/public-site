@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
@@ -21,6 +21,16 @@ const MENU_ITEM_ARRANGEMENT = [
 
 
 function IndexPage() {
+  const formLoadedCountRef = useRef(0);
+
+  const handleOrderFormLoad = useCallback(() => {
+    window.location.hash = '#order';
+    formLoadedCountRef.current++;
+    if (formLoadedCountRef.current === 2) {
+    }
+  }, []);
+
+
   return (
     <>
       <ContentSection>
@@ -101,9 +111,10 @@ function IndexPage() {
         <ContentSectionHeading text="Order Form" />
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSd3-HTUu2u_YPcLVIBJGzCcTb4b0alFTZ2P-fjKJuoObPhjtA/viewform?embedded=true"
-          width="100%"
-          height="1500px"
           frameBorder="0"
+          height="1500px"
+          width="100%"
+          onLoad={handleOrderFormLoad}
         >
           Loading…
         </iframe>
