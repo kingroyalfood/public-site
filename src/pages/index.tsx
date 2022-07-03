@@ -1,12 +1,13 @@
 import React, { useCallback, useRef } from 'react';
 
 import Box from "@mui/material/Box";
+import Divider from "@mui/material/Divider";
 import Typography from "@mui/material/Typography";
 
 import {
-  ContentSection,
   ContentSectionHeading,
 } from "components/helpers";
+
 import { staticMedia } from "util/shortcuts";
 
 
@@ -24,16 +25,16 @@ function IndexPage() {
   const formLoadedCountRef = useRef(0);
 
   const handleOrderFormLoad = useCallback(() => {
-    window.location.hash = '#order';
     formLoadedCountRef.current++;
     if (formLoadedCountRef.current === 2) {
+      window.location.hash = '#order';
     }
   }, []);
 
 
   return (
     <>
-      <ContentSection>
+      <Box component="section" mb={3}>
         <Box
           display={{ xs: 'flex', md: 'grid' }}
           flexDirection="column"
@@ -58,9 +59,9 @@ function IndexPage() {
             sx={{ width: '100%' }}
           />
         </Box>
-      </ContentSection>
+      </Box>
 
-      <ContentSection id="menu">
+      <Box component="section" mb={3} id="menu">
         <ContentSectionHeading text="Our Menu" />
 
         <Typography variant="h3" mt={4}>
@@ -105,20 +106,20 @@ function IndexPage() {
           Our food is frozen prior to delivery and can keep in the freezer for
           up to one month at -18c or below.
         </Typography>
-      </ContentSection>
+      </Box>
 
-      <ContentSection id="order">
-        <ContentSectionHeading text="Order Form" />
+      <Box component="section" mb={3} id="order">
+        <Divider sx={{ my: 2 }}/>
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSd3-HTUu2u_YPcLVIBJGzCcTb4b0alFTZ2P-fjKJuoObPhjtA/viewform?embedded=true"
           frameBorder="0"
-          height="1500px"
+          height="1550px"
           width="100%"
           onLoad={handleOrderFormLoad}
         >
           Loading…
         </iframe>
-      </ContentSection>
+      </Box>
     </>
   );
 }
