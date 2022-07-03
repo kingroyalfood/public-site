@@ -35,7 +35,13 @@ export default function ApplicationBar({ maxContainerWidth }: {
         <AppBar>
           <Container maxWidth={maxContainerWidth}>
             <Toolbar disableGutters className={styles.toolbar}>
-
+              <img
+                alt="King Royal Food Logo"
+                src={`${process.env.NEXT_PUBLIC_URL_PREFIX}/apple-touch-icon.png`}
+                width="180"
+                height="180"
+              />
+              {process.env.NEXT_PUBLIC_APP_TITLE}
             </Toolbar>
           </Container>
         </AppBar>

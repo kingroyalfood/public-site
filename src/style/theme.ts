@@ -20,7 +20,7 @@ const theme = responsiveFontSizes(
     },
 
     typography: {
-      fontFamily: '"Montserrat", sans-serif',
+      fontFamily: '"Times New Roman", sans-serif',
 
       h1: {
         fontSize: 60,
@@ -30,10 +30,10 @@ const theme = responsiveFontSizes(
 
     palette: {
       primary: {
-        main: '#556cd6',
+        main: '#f6632d',
       },
       secondary: {
-        main: '#19857b',
+        main: '#eeccb3',
       },
       error: {
         main: red.A400,
