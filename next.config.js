@@ -8,7 +8,7 @@ const basePath = process.env.NEXT_PUBLIC_URL_PREFIX;
 
 module.exports = {
   assetPrefix: basePath ? `${basePath}/` : '',
-  basePath: procyarness.env.NEXT_PUBLIC_URL_PREFIX || '',
+  basePath: process.env.NEXT_PUBLIC_URL_PREFIX || '',
 
   sassOptions: {
     includePaths: [path.join(__dirname, 'src', 'style')],
