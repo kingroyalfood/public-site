@@ -1,0 +1,11 @@
+{
+  "name": "king-royal-food",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "deploy": "gh-pages -t -d htdocs"
+  },
+  "devDependencies": {
+    "gh-pages": "latest"
+  }
+}
