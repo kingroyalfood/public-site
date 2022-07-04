@@ -47,7 +47,7 @@ function IndexPage() {
             <Typography fontSize={20}>
               We are King Royal Food, a package and food delivery service
               brand that is committed to cooking serving healthy culinary
-              delights, providing clients with delicious shacks without
+              delights, providing clients with delicious snacks without
               any hassle.
             </Typography>
           </Box>
